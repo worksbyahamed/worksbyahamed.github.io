@@ -1,209 +1,1170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>worksbyahamed | Ethical Hacker Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #0a0f0d;
-      color: #d1f2d8;
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-      position: relative;
-    }
-    /* Matrix Rain Effect */
-    #matrix-canvas {
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.18;
-    }
-    /* Social Links Bar */
-    .social-links-left {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background: rgba(10, 20, 20, 0.92);
-      border-top-right-radius: 1.5rem;
-      border-bottom-right-radius: 1.5rem;
-      box-shadow: 2px 0 24px #22c55eaa;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.1rem;
-      padding: 1.3rem 1rem 1.3rem 0.8rem;
-      z-index: 1002;
-      min-width: 170px;
-    }
-    .social-links-left a {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: #22c55e;
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 700;
-      font-size: 1.18rem;
-      text-decoration: none;
-      padding: 0.5rem 1rem 0.5rem 0.6rem;
-      border-radius: 1rem;
-      transition: background 0.3s, color 0.3s;
-      width: 100%;
-    }
-    .social-links-left a:hover,
-    .social-links-left a:focus {
-      background: #22c55e;
-      color: #0a0f0d;
-      outline: none;
-    }
-    .social-links-left svg {
-      width: 28px;
-      height: 28px;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
-    .social-label {
-      flex-grow: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    /* Glassmorphism Card */
-    .glass-card {
-      background: rgba(16, 41, 26, 0.92);
-      box-shadow: 0 0 40px #22c55e44;
-      border-radius: 2rem;
-      padding: 2.5rem 2rem;
-      margin: 5vh auto;
-      max-width: 420px;
-      text-align: center;
-      z-index: 2;
-      position: relative;
-      border: 1.5px solid #22c55e66;
-      backdrop-filter: blur(8px);
-    }
-    .glass-card h1 {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-size: 2.2rem;
-      color: #22c55e;
-      letter-spacing: 0.13em;
-      text-shadow: 0 0 12px #22c55e;
-      margin-bottom: 0.8rem;
-    }
-    .glass-card .subtitle {
-      color: #3b82f6;
-      font-size: 1.08rem;
-      margin-bottom: 1.6rem;
-    }
-    .terminal {
-      background: #181f1b;
-      color: #00ff90;
-      font-family: 'Share Tech Mono', monospace;
-      border-radius: 1rem;
-      box-shadow: 0 0 14px #00ff90aa;
-      padding: 1.2rem 1rem;
-      margin: 1.3rem 0 0.7rem 0;
-      text-align: left;
-      font-size: 1.01rem;
-      line-height: 1.5;
-      overflow-x: auto;
-    }
-    .glow {
-      color: #ff00cc;
-      text-shadow: 0 0 8px #ff00cc, 0 0 16px #ff00cc44;
-    }
-    @media (max-width: 600px) {
-      .glass-card { padding: 1.2rem 0.5rem; }
-      .social-links-left {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        width: 100vw;
-        border-radius: 0 0 1.5rem 1.5rem;
-        box-shadow: none;
-        padding: 0.6rem 0.3rem;
-        margin-bottom: 1rem;
-      }
-      .social-links-left a {
-        font-size: 1rem;
-        padding: 0.4rem 0.7rem;
-        justify-content: center;
-      }
-      .social-label { display: none; }
-      .social-links-left svg { width: 24px; height: 24px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakir Ahamed | Cybersecurity Specialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --neon-cyan: #00ffff;
+            --neon-green: #00ff41;
+            --neon-purple: #ff00ff;
+            --neon-red: #ff073a;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: rgba(15, 15, 15, 0.9);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+        
+        body {
+            font-family: 'Orbitron', monospace;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Animated Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                linear-gradient(45deg, #0a0a0a, #1a0a1a),
+                radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.05) 0%, transparent 50%);
+            overflow: hidden;
+        }
+        
+        .matrix-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 255, 65, 0.15) 0%, transparent 50%);
+            animation: matrixMove 20s linear infinite;
+        }
+        
+        .matrix-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.03) 25%, rgba(0, 255, 255, 0.03) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.03) 75%, rgba(255, 0, 255, 0.03) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(0, 255, 65, 0.03) 25%, rgba(0, 255, 65, 0.03) 26%, transparent 27%, transparent 74%, rgba(0, 255, 65, 0.03) 75%, rgba(0, 255, 65, 0.03) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            animation: gridMove 15s linear infinite;
+        }
+        
+        @keyframes matrixMove {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            animation: glitch-1 0.5s infinite;
+            color: var(--neon-cyan);
+            z-index: -1;
+        }
+        
+        .glitch::after {
+            animation: glitch-2 0.5s infinite;
+            color: var(--neon-red);
+            z-index: -2;
+        }
+        
+        @keyframes glitch-1 {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        @keyframes glitch-2 {
+            0% { transform: translate(0); }
+            20% { transform: translate(2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, 2px); }
+            80% { transform: translate(-2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--neon-cyan);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .nav-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            animation: navScan 3s ease-in-out infinite;
+        }
+        
+        @keyframes navScan {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-green);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 0 1rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-green));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite, textFloat 6s ease-in-out infinite;
+            position: relative;
+        }
+        
+        .hero-content h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            opacity: 0.3;
+            filter: blur(10px);
+            z-index: -1;
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes textFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulseGlow {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--neon-green);
+            margin-bottom: 2rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            color: var(--dark-bg);
+            background: var(--neon-cyan);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+        
+        .btn.secondary {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+        }
+        
+        .btn.secondary:hover {
+            background: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-purple);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .skill-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(from 0deg, transparent, var(--neon-purple), transparent 30%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            animation: skillRotate 8s linear infinite;
+        }
+        
+        .skill-card:hover::before {
+            transform: translateX(0);
+        }
+        
+        .skill-card:hover::after {
+            opacity: 0.1;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(255, 0, 255, 0.3);
+            border-color: var(--neon-cyan);
+        }
+        
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--neon-purple);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .skill-card:hover i {
+            color: var(--neon-cyan);
+            transform: scale(1.2) rotateY(360deg);
+            text-shadow: 0 0 20px var(--neon-cyan);
+        }
+        
+        @keyframes skillRotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-green);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--neon-green), transparent 30%);
+            animation: projectRotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            transform: translateX(-100%) skew(45deg);
+            transition: transform 0.6s ease;
+        }
+        
+        .project-card:hover::before {
+            opacity: 0.15;
+        }
+        
+        .project-card:hover::after {
+            transform: translateX(100%) skew(45deg);
+        }
+        
+        .project-card:hover {
+            transform: scale(1.05) translateZ(20px);
+            box-shadow: 
+                0 25px 50px rgba(0, 255, 65, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-color: var(--neon-cyan);
+        }
+        
+        @keyframes projectRotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-links a {
+            color: var(--neon-cyan);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            color: var(--text-primary);
+            text-shadow: 0 0 5px var(--neon-cyan);
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .contact-item {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-red);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255, 7, 58, 0.2) 0%, transparent 70%);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        
+        .contact-item:hover::before {
+            width: 200%;
+            height: 200%;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-15px) rotateX(10deg);
+            box-shadow: 
+                0 25px 50px rgba(255, 7, 58, 0.3),
+                0 0 30px rgba(255, 7, 58, 0.2);
+            border-color: var(--neon-cyan);
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--neon-red);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-item:hover i {
+            color: var(--neon-cyan);
+            transform: scale(1.3) rotateY(360deg);
+            text-shadow: 0 0 15px var(--neon-cyan);
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            display: inline-block;
+            max-width: 100%;
+        }
+        
+        .contact-item a:hover {
+            color: var(--neon-red);
+        }
+        
+        /* Typing Animation */
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-item {
+                padding: 1.5rem;
+            }
+            
+            .contact-item a {
+                word-break: break-all;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .skill-card, .project-card {
+                padding: 1.5rem;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Fix for very small screens */
+        @media (max-width: 320px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 2rem 0.5rem;
+            }
+            
+            .contact-item a {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-green));
+            background-size: 200% 100%;
+            transform-origin: 0%;
+            z-index: 10000;
+            animation: indicatorFlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes indicatorFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Floating particles */
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 20s linear infinite;
+        }
+        
+        .particle:nth-child(2n) {
+            background: var(--neon-purple);
+            animation-duration: 25s;
+        }
+        
+        .particle:nth-child(3n) {
+            background: var(--neon-green);
+            animation-duration: 30s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Terminal Prompt */
+        .terminal-prompt {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+        }
+        
+        .terminal-prompt::before {
+            content: '> ';
+            color: var(--neon-cyan);
+        }
+    </style>
 </head>
 <body>
-  <canvas id="matrix-canvas"></canvas>
-  <!-- Social Links Left Bar with SVG Icons -->
-  <nav class="social-links-left" aria-label="Social Links">
-    <a href="https://worksbyahamed.my.canva.site/worksbyahamed" target="_blank" rel="noopener" title="Portfolio">
-      <!-- Globe / Portfolio SVG Icon -->
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm7.938 9h-3.07a15.3 15.3 0 0 0-1.3-5.01A8.027 8.027 0 0 1 19.938 11zM12 4.063a13.2 13.2 0 0 1 2.178 5.5H9.822A13.2 13.2 0 0 1 12 4.063zM4.06 11a8.027 8.027 0 0 1 4.37-4.01 15.3 15.3 0 0 0-1.3 5.01zm.02 2h3.07a15.3 15.3 0 0 0 1.3 5.01A8.027 8.027 0 0 1 4.08 13zm2.59 6.947a13.2 13.2 0 0 1-2.18-5.5h4.356a13.2 13.2 0 0 1-2.176 5.5zm5.35 1.99a13.2 13.2 0 0 1-2.178-5.5h4.356a13.2 13.2 0 0 1-2.178 5.5zm3.91-1.99a13.2 13.2 0 0 1-2.178-5.5h4.356a13.2 13.2 0 0 1-2.178 5.5zm2.18-7.5h3.07a8.027 8.027 0 0 1-4.37 4.01 15.3 15.3 0 0 0 1.3-5.01z"/></svg>
-      <span class="social-label">Portfolio</span>
-    </a>
-    <a href="https://github.com/worksbyahamed" target="_blank" rel="noopener" title="GitHub">
-      <!-- GitHub SVG Icon -->
-      <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12a12 12 0 0 0 8.207 11.385c.6.11.82-.26.82-.577v-2.234c-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.334-1.753-1.334-1.753-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.335-5.467-5.933 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.63-5.48 5.922.43.37.814 1.1.814 2.22v3.293c0 .32.217.694.825.576A12 12 0 0 0 24 12c0-6.627-5.373-12-12-12z"/></svg>
-      <span class="social-label">GitHub</span>
-    </a>
-    <a href="https://www.linkedin.com/in/worksbyahamed" target="_blank" rel="noopener" title="LinkedIn">
-      <!-- LinkedIn SVG Icon -->
-      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.355V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.603 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433a2.06 2.06 0 1 1 0-4.118 2.06 2.06 0 0 1 0 4.118zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.728v20.543C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.728C24 .774 23.2 0 22.225 0z"/></svg>
-      <span class="social-label">LinkedIn</span>
-    </a>
-  </nav>
-
-  <!-- Main Content: Glassmorphism Card with Terminal -->
-  <section class="glass-card">
-    <h1>worksbyahamed</h1>
-    <div class="subtitle">Ethical Hacker & Cybersecurity Enthusiast</div>
-    <div class="terminal">
-      <span class="glow">root@cyberlab:~$</span> whoami<br>
-      <span class="glow">worksbyahamed</span><br>
-      <span class="glow">root@cyberlab:~$</span> nmap -A portfolio.com<br>
-      <span style="color:#3b82f6;">Starting Nmap 7.91 ( https://nmap.org ) at 2025-05-25</span><br>
-      <span style="color:#22c55e;">PORT     STATE SERVICE VERSION<br>22/tcp   open  ssh     OpenSSH 8.2<br>80/tcp   open  http    Apache 2.4.41<br>443/tcp  open  https   nginx 1.18.0</span><br>
-      <span class="glow">root@cyberlab:~$</span> <span style="color:#ff00cc;">echo "Welcome to my ethical hacking portfolio!"</span>
-    </div>
-    <div style="margin-top:1.2rem; font-size:1.05rem; color:#d1f2d8;">
-      <strong>Skills:</strong> Penetration Testing, Network Security, Web App Security, Python, Linux, CTFs<br>
-      <strong>Tools:</strong> Burp Suite, Nmap, Wireshark, Metasploit, Kali Linux, OWASP ZAP
-    </div>
-  </section>
-
-  <!-- Matrix Rain Effect JS -->
-  <script>
-    const canvas = document.getElementById('matrix-canvas');
-    const ctx = canvas.getContext('2d');
-    let w = window.innerWidth, h = window.innerHeight;
-    canvas.width = w; canvas.height = h;
-    const cols = Math.floor(w / 18);
-    const ypos = Array(cols).fill(0);
-    function matrix() {
-      ctx.fillStyle = 'rgba(10,15,13,0.13)';
-      ctx.fillRect(0, 0, w, h);
-      ctx.fillStyle = '#22c55e';
-      ctx.font = '18px monospace';
-      ypos.forEach((y, ind) => {
-        const text = String.fromCharCode(Math.random() * 128);
-        ctx.fillText(text, ind * 18, y);
-        if (y > h + Math.random() * 10000) ypos[ind] = 0;
-        else ypos[ind] = y + 18;
-      });
-    }
-    setInterval(matrix, 70);
-    window.addEventListener('resize', () => {
-      w = window.innerWidth; h = window.innerHeight;
-      canvas.width = w; canvas.height = h;
-    });
-  </script>
+    <div class="matrix-bg"></div>
+    <div class="floating-particles" id="particles"></div>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo glitch" data-text="SHAKIR.EXE">SHAKIR.EXE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="SHAKIR AHAMED">SHAKIR AHAMED</h1>
+            <div class="subtitle typing">CYBERSECURITY SPECIALIST</div>
+            <p class="terminal-prompt">Ethical hacker and cybersecurity enthusiast specializing in penetration testing, vulnerability assessment, and digital security. Currently pursuing Bachelor's in Computer Applications (Cybersecurity) at Crescent University.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="https://linkedin.com/in/worksbyahamed" class="btn secondary" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/worksbyahamed" class="btn secondary" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="section">
+        <h2 class="glitch" data-text="ARSENAL.SYS">ARSENAL.SYS</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Ethical Hacking</h3>
+                <p>OWASP Top 10, VAPT, Penetration Testing, and vulnerability assessment with industry-standard tools and methodologies.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Programming</h3>
+                <p>Python, C, C++, Java - Building security tools and automation scripts for cybersecurity applications.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Network Security</h3>
+                <p>Nmap, Wireshark, Metasploit, Burp Suite - Network analysis, information gathering, and security testing.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-lock"></i>
+                <h3>Cryptography</h3>
+                <p>Encryption/Decryption algorithms, password security, and cryptographic implementations for secure communications.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-linux"></i>
+                <h3>Kali Linux</h3>
+                <p>Advanced Linux operations, command-line tools, and specialized cybersecurity distributions for penetration testing.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>Database Security</h3>
+                <p>PostgreSQL, SQL injection prevention, and database security best practices with 85% certification score.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <h2 class="glitch" data-text="EXPLOITS.DIR">EXPLOITS.DIR</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3><i class="fas fa-globe"></i> Ethical Hacking Cyber Portal</h3>
+                <p>A modern, interactive web platform empowering cybersecurity learners with practical tools, encryption utilities, password strength checkers, phishing detection systems, and a comprehensive cyberattack glossary with a cyberpunk-inspired interface.</p>
+                <div class="project-links">
+                    <a href="https://github.com/worksbyahamed/cyber-portal" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                    <a href="https://github.com/worksbyahamed/cyber-portal" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3><i class="fas fa-key"></i> Password Security Testing Tool</h3>
+                <p>Educational tool demonstrating password security concepts with multiple testing modes, hash testing, entropy calculation, performance metrics, and ethical controls with explicit consent confirmation and rate limiting.</p>
+                <div class="project-links">
+                    <a href="https://github.com/worksbyahamed/password-testing-tool" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                    <a href="https://github.com/worksbyahamed/password-testing-tool" target="_blank">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3><i class="fas fa-bolt"></i> Efficient DDoS Simulation Lab</h3>
+                <p>High-performance, multi-threaded DDoS simulator built in Python for educational purposes. Features a stylish fake web server with live animated request counter, providing a safe and legal environment for hands-on security learning.</p>
+                <div class="project-links">
+                    <a href="https://github.com/worksbyahamed/efficient-ddos-simulation" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                    <a href="https://github.com/worksbyahamed/efficient-ddos-simulation" target="_blank">
+                        <i class="fas fa-flask"></i> Lab Setup
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2 class="glitch" data-text="CONNECT.NET">CONNECT.NET</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="mailto:worksbyahamed@gmail.com">worksbyahamed@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <a href="tel:+919342504130">+91-93425-04130</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/worksbyahamed" target="_blank">Shakir-Ahamed</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <a href="https://github.com/worksbyahamed" target="_blank">worksbyahamed</a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollIndicator').style.transform = `scaleX(${scrollPercentage / 100})`;
+        });
+        
+        // Typing effect for subtitle
+        const subtitle = document.querySelector('.typing');
+        const text = 'CYBERSECURITY SPECIALIST';
+        let index = 0;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                subtitle.textContent = text.slice(0, index + 1);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Start typing effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 2000);
+        });
+        
+        // Matrix rain effect
+        function createMatrixRain() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.zIndex = '-1';
+            canvas.style.opacity = '0.1';
+            
+            document.body.appendChild(canvas);
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const columns = canvas.width / 20;
+            const drops = [];
+            
+            for (let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = '#00ff41';
+                ctx.font = '15px monospace';
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = String.fromCharCode(Math.random() * 128);
+                    ctx.fillText(text, i * 20, drops[i] * 20);
+                    
+                    if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            
+            setInterval(draw, 35);
+        }
+        
+        // Initialize matrix rain
+        createMatrixRain();
+        
+        // Create floating particles
+        function createFloatingParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth > 768 ? 50 : 25;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (20 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createFloatingParticles();
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                        entry.target.style.animationDelay = (index * 0.1) + 's';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards
+        document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Add CSS for fade in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px) rotateX(-10deg);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) rotateX(0deg);
+                }
+            }
+            
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-100px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            .skill-card, .project-card, .contact-item {
+                opacity: 0;
+            }
+            
+            .skill-card:nth-child(odd) {
+                animation: slideInLeft 0.8s ease forwards;
+            }
+            
+            .skill-card:nth-child(even) {
+                animation: slideInRight 0.8s ease forwards;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Cursor trail effect
+        const cursor = document.createElement('div');
+        cursor.style.cssText = `
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        `;
+        document.body.appendChild(cursor);
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+        });
+        
+        // Hide cursor trail on mobile
+        if (window.innerWidth <= 768) {
+            cursor.style.display = 'none';
+        }
+        
+        // Mobile viewport fix
+        function setViewportHeight() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setViewportHeight, 100);
+        });
+        
+        // Touch-friendly interactions for mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.skill-card, .project-card, .contact-item').forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+    </script>
 </body>
 </html>
